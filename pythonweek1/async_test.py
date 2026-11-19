@@ -7,13 +7,8 @@ async def fake_api(name,delay):
     return name
 async def main():
     start = time.time()
-    # results = await asyncio.gather(fake_api("api1",2),fake_api("api2",1))
+    results = await asyncio.gather(fake_api("api1",2),fake_api("api2",1))
 
-    results = []
-
-    results.append(await fake_api("A", 1))
-    results.append(await fake_api("B", 1))
-    results.append(await fake_api("C", 1))
     print(results)
 
     print(f"总耗时{time.time()-start}")

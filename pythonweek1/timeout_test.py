@@ -5,7 +5,7 @@ async def fake_api():
     await asyncio.sleep(5)
     return "API 正常返回结果"
 async def main():
-    start = time.time()
+    start = time.perf_counter()
     try:
         result = await asyncio.wait_for(
             fake_api(),
